@@ -1,38 +1,159 @@
+:root {
+    --light-color: rgba(224, 224, 240, 0.8);
+    --lighter-color: rgba(224, 224, 240, 0.6);
+    --dark-color: rgba(32, 32, 48, 0.6);
+    --darker-color: rgba(32, 32, 48, 0.8);
+}
 .App {
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100vh;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.light-schema {
+    background-color: var(--light-color);
+    color: var(--dark-color);
 }
-
+.dark-schema {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+.lighter-schema {
+    background-color: var(--lighter-color);
+    color: var(--darker-color);
+}
+.darker-schema {
+    background-color: var(--darker-color);
+    color: var(--lighter-color);
+}
+.light-bg {
+    background-color: var(--light-color);
+}
+.lighter-bg {
+    background-color: var(--lighter-color);
+}
+.dark-bg {
+    background-color: var(--dark-color);
+}
+.darker-bg {
+    background-color: var(--darker-color);
+}
+.light-color {
+    color: var(--light-color);
+}
+.lighter-color {
+    color: var(--lighter-color);
+}
+.dark-color {
+    color: var(--dark-color);
+}
+.darker-color {
+    color: var(--darker-color);
+}
+header {
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 10px 0 rgba(128, 128, 144, 0.5);
+}
+.color-schema-switch {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.toggle-checkbox {
+    position: absolute;
+    visibility: hidden;
+}
+.toggle-switch {
+    display: inline-block;
+    background: #ccc;
+    border-radius: 16px;
+    width: 40px;
+    height: 25px;
+    position: relative;
+    vertical-align: middle;
+    transition: background 0.25s;
+}
+.toggle-switch:before,
+.toggle-switch:after {
+    content: "";
+}
+.toggle-switch:before {
+    display: block;
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transition: left 0.25s;
+}
+.toggle:hover .toggle-switch:before {
+    background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.toggle-checkbox:checked + .toggle-switch {
+    background: #444;
+}
+.toggle-checkbox:checked + .toggle-switch:before {
+    left: 20px;
+}
+.hbd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 1rem;
+    text-align: center;
+}
+.hbd h2 {
+    margin-top: 0;
+}
+.hbd .moon-image {
+    max-width: 100%;
+}
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .hbd .moon-image {
+      animation: infinite-spin infinite 120s linear;
+      -webkit-animation: infinite-spin infinite 120s linear;
+    }
+}
+.celebrate-congrats {
+    display: inline-block;
+    margin: 5px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.light-schema .celebrate-congrats {
+    color: #09a341;
+}
+.dark-schema .celebrate-congrats {
+    color: #59f3a1;
+}
+.celebrate-button,
+.reset-button {
+    margin: 1rem 0.5rem;
+    padding: 0.5rem 2rem;
+    font-size: 1.5rem;
+    border-width: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes infinite-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
 }
