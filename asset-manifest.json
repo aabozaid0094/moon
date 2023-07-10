@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/moon/static/css/main.073c9b0a.css",
-    "main.js": "/moon/static/js/main.b17a9401.js",
+    "main.css": "/moon/static/css/main.3e76fb9d.css",
+    "main.js": "/moon/static/js/main.fd338a62.js",
     "static/js/787.5d3682f3.chunk.js": "/moon/static/js/787.5d3682f3.chunk.js",
-    "static/media/logo.svg": "/moon/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/Moon512.png": "/moon/static/media/Moon512.1bb4b7a728f6473f0e62.png",
     "index.html": "/moon/index.html",
-    "main.073c9b0a.css.map": "/moon/static/css/main.073c9b0a.css.map",
-    "main.b17a9401.js.map": "/moon/static/js/main.b17a9401.js.map",
+    "main.3e76fb9d.css.map": "/moon/static/css/main.3e76fb9d.css.map",
+    "main.fd338a62.js.map": "/moon/static/js/main.fd338a62.js.map",
     "787.5d3682f3.chunk.js.map": "/moon/static/js/787.5d3682f3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.b17a9401.js"
+    "static/css/main.3e76fb9d.css",
+    "static/js/main.fd338a62.js"
   ]
 }
