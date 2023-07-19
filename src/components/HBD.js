@@ -6,12 +6,9 @@ const HBD = (props) => {
     //States
     const [celebrate, set_celebrate] = React.useState(false);
 
-    // Effects
-    React.useEffect(() => {
-        set_celebrate(() => {
-            return true;
-        });
-    }/*, [tenzies]*/);
+    const reveal = () => {
+        set_celebrate(() => true);
+    };
 
     const reset = () => {
         set_celebrate(() => false);
