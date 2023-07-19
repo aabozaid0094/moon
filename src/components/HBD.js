@@ -1,6 +1,7 @@
 import React from "react";
 import Confetti from "react-confetti";
 import Moon from "../images/Moon512.png";
+import RealMoon from "../images/RealMoon.png";
 
 const HBD = (props) => {
     //States
@@ -21,21 +22,29 @@ const HBD = (props) => {
             }`}
         >
             {celebrate && <Confetti />}
-            <h2>Happy Birthday</h2>
-            <img src={Moon} className="moon-image" alt="Moon" />
-            <p>
-                Click Celebrate to celebrate ^_^
-            </p>
+            {!celebrate && <h2>Moon</h2>}
+            {celebrate && <h2>Real Moon</h2>}
+
+            {!celebrate && <img src={Moon} className="moon-image" alt="Moon" />}
             {celebrate && (
-                <span className="celebrate-congrats">Congrats!!!</span>
+                <img
+                    src={RealMoon}
+                    className="real-moon-image"
+                    alt="Real Moon"
+                />
+            )}
+
+            {!celebrate && <p>Click Reveal to reveal the real moon</p>}
+            {celebrate && (
+                <span className="celebrate-congrats">Happy Birthday!!!</span>
             )}
             {!celebrate && (
                 <button
                     className="celebrate-button dark-bg"
                     id="roll_button"
-                    onClick={set_celebrate}
+                    onClick={reveal}
                 >
-                    Celebrate
+                    Reveal
                 </button>
             )}
             {celebrate && (
@@ -44,7 +53,7 @@ const HBD = (props) => {
                     id="roll_button"
                     onClick={reset}
                 >
-                    Reset
+                    Hide
                 </button>
             )}
         </div>
