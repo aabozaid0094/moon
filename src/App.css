@@ -114,6 +114,9 @@ header {
 .hbd h2 {
     margin-top: 0;
 }
+.hbd img {
+    max-height: 450px;
+}
 .hbd .moon-image {
     max-width: 100%;
 }
