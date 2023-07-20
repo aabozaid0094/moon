@@ -113,6 +113,7 @@ header {
 }
 .hbd h2 {
     margin-top: 0;
+    font-size: 2.5rem;
 }
 .hbd img {
     max-height: 450px;
@@ -126,6 +127,9 @@ header {
       -webkit-animation: infinite-spin infinite 120s linear;
     }
 }
+.celebrate-instruct {
+    font-size: 1.5rem;
+}
 .celebrate-congrats {
     display: inline-block;
     margin: 5px;
@@ -136,7 +140,7 @@ header {
     color: #09a341;
 }
 .dark-schema .celebrate-congrats {
-    color: #59f3a1;
+    color: #39d381;
 }
 .celebrate-button,
 .reset-button {
