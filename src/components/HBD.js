@@ -34,9 +34,9 @@ const HBD = (props) => {
                 />
             )}
 
-            {!celebrate && <p>Click Reveal to reveal the real moon</p>}
+            {!celebrate && <p className="celebrate-instruct">Click to reveal the <b>Real Moon</b></p>}
             {celebrate && (
-                <span className="celebrate-congrats">Happy Birthday!!!</span>
+                <span className="celebrate-congrats">Happy Birthday !!!</span>
             )}
             {!celebrate && (
                 <button
